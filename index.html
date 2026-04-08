@@ -67,14 +67,15 @@ nav { position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 48px;display:
 .stat-label { font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--silver-dim);margin-top:4px; }
 
 /* BRAND STRIP */
-.brand-strip { background:var(--dark2);border-top:1px solid rgba(201,168,76,.12);border-bottom:1px solid rgba(201,168,76,.12);padding:22px 48px;display:flex;align-items:center;overflow:hidden; }
-.strip-label { font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);white-space:nowrap;margin-right:40px;flex-shrink:0; }
-.logos-track { display:flex;align-items:center;gap:52px;animation:marquee 24s linear infinite; }
+.brand-strip { background:var(--dark2);border-top:1px solid rgba(201,168,76,.12);border-bottom:1px solid rgba(201,168,76,.12);padding:16px 0 20px;display:flex;flex-direction:column;align-items:center;gap:14px;overflow:hidden; }
+.strip-label { font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);white-space:nowrap;flex-shrink:0; }
+.logos-track-wrapper { width:100%;overflow:hidden; }
+.logos-track { display:flex;align-items:center;gap:64px;animation:marquee 28s linear infinite;width:max-content; }
 @keyframes marquee { from{transform:translateX(0)}to{transform:translateX(-50%)} }
-.brand-item { display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.4;transition:opacity .3s;flex-shrink:0;cursor:default; }
-.brand-item:hover { opacity:.9; }
+.brand-item { display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.35;transition:opacity .3s;flex-shrink:0;cursor:default; }
+.brand-item:hover { opacity:.85; }
 .brand-item-name { font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver); }
-.brand-item img { filter:brightness(0) invert(1);object-fit:contain; }
+.brand-item img { filter:brightness(0) invert(1);object-fit:contain;height:40px;width:auto; }
 
 /* GALLERY SECTION */
 .gsection { padding:100px 48px;max-width:1400px;margin:0 auto; }
@@ -253,6 +254,7 @@ footer { background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);paddin
 <!-- BRAND STRIP -->
 <div class="brand-strip">
   <span class="strip-label">Featured Brands</span>
+  <div class="logos-track-wrapper">
   <div class="logos-track" id="track">
 
     <div class="brand-item">
@@ -315,9 +317,8 @@ footer { background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);paddin
     </div>
 
   </div>
+  </div>
 </div>
-
-<!-- FEATURED WORK -->
 <div id="work" class="gsection fade-in">
   <div class="eyebrow">
     <div class="eyebrow-line"></div>
